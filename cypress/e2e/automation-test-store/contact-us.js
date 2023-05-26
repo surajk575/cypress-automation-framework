@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 /// <reference types="@cypress/Xpath" />
 
-describe("Test Contact Us from via Automation Test Store", () =>{
+describe("Test Contact Us from via Automation Test Stores", () =>{
     it("Should be able to submit a successful submission via contact us form", () => {
         //cypress code
        

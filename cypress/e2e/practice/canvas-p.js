@@ -9,7 +9,7 @@ describe("CanvasGoogle", () => {
    
     it('should click a map', () => {
 
-        cy.canvas_click(500,500)
+        cy.canvas_click(700,600)
 
     });
 

@@ -6,7 +6,7 @@ describe("Canvas", () => {
       cy.visit("https://kitchen.applitools.com/ingredients/canvas");
     });
    
-    it('should click a button on a canvas', () => {
+    it('should click a button on  canvas', () => {
       //cy.viewport('iphone-x')
       cy.get('#burger_canvas').then($canvas =>{
         // Get dimension of the canvas

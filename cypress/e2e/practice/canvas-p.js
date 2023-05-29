@@ -1,4 +1,4 @@
-
+/// <reference types="Cypress" />
 
 describe("CanvasGoogle", () => {
  
@@ -13,4 +13,4 @@ describe("CanvasGoogle", () => {
 
     });
 
-  })  
+})  

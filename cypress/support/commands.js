@@ -53,3 +53,18 @@ Cypress.Commands.add('Click_button', (Selector) => {
       .click(x, y);
     })
   })
+
+  // dropdown
+  Cypress.Commands.add('drop_click', (selector, text) => {
+    cy.get(selector).select(text)
+    
+    })
+
+    //random selectop
+    Cypress.Commands.add('random_select', (selector, optionsSelector) => {
+      cy.Click_button(selector)
+      cy.get(optionsSelector).then(($elements) => {
+        const randomOption = Math.floor(Math.random() * $elements.length);
+        cy.Click_button($elements[randomOption]) 
+      })
+    })

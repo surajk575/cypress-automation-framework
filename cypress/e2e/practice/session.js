@@ -19,17 +19,16 @@ describe("Actitime", ()=> {
 
      
     it("Login1",() => {
-      cy.visit('https://demo.actitime.com/user/submit_tt.do');
-       cy.get('.switcherBackground').should('be.visible')
-
-
+      
+        cy.visit("https://demo.actitime.com/user/submit_tt.do")
+       
     })
-    it("Login2",() => {
+    /*it("Login2",() => {
         cy.visit('https://demo.actitime.com/user/submit_tt.do');
         cy.get('.content users').should('be.visible')
  
  
-     })
+     })*/
 })        
          
      

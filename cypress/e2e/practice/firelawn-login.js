@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Firelawn new", ()=> {
+describe("Firelawn new log", ()=> {
 
    /* before(function(){
 

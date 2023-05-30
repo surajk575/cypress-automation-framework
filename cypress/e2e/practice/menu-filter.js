@@ -2,7 +2,7 @@
 
 describe("Menu Filter", () => {
  
-    it('should click menu item', () => {
+    it('should click on multiple menu item', () => {
 
 
        //cy.get(".ui.dropdown>*").find('.dropdown.icon').invoke('attr', 'title').should('include', 'Add to Cart')

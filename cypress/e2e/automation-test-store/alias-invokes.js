@@ -20,7 +20,7 @@ describe("Alias and invikes", () =>{
         cy.get('@allThumbnail').find('.productcart').invoke('attr', 'title').should('include', 'Add to Cart')   
     })  
 
-    it.only("Calculate total of nornal and sale products", () => {
+    it.only("Calculate total of nornal and sale products1", () => {
         // Lecture 97
         cy.visit("https://automationteststore.com/")
         /*

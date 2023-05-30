@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Firelawn", ()=> {
+describe("Firelawn new site login", ()=> {
 
     it("Login",() => {
         cy.session('Login Session', () => {

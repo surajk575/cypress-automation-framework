@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["es5", "dom"],
+      "types": ["cypress", "node"]
+    },
+    "include": ["**/*.ts", "cypress/support/commands.js", "cypress/support/e2e.js", "cypress.config.js", "cypress/e2e/webdriver-uni/autocomplete-dropdown-list.js", "cypress/e2e/webdriver-uni/browser-navigation.js", "cypress/e2e/webdriver-uni/checkboxes.js", "cypress/e2e/webdriver-uni/contact-us.js", "cypress/e2e/webdriver-uni/iframe.js", "cypress/e2e/webdriver-uni/js-alerts.js", "cypress/e2e/webdriver-uni/mouse-actions.js", "cypress/e2e/webdriver-uni/radio-buttons.js", "cypress/e2e/webdriver-uni/select-dropdown-list.js", "cypress/e2e/webdriver-uni/selectors.js"]
+  }

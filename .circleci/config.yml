@@ -1,21 +1,8 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@3
+  cypress: cypress-io/cypress@3.1.2
 workflows:
   build:
     jobs:
-      - cypress/run
-      
-
-
-version: 2.1
-orbs: 
-  node: circleci/node@5.0.2
-jobs:
-  build:
-    steps:
-      - checkout
-      - node/install
-      - node/install-packages:
-          include-branch-in-cache-key: false
-      - run ...      
+      - cypress/run:
+         start-command: npm run start

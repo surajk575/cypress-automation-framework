@@ -7,7 +7,7 @@ describe("CanvasGoogle", () => {
       
     });
    
-    it('should click a map', () => {
+    it('should click on a map', () => {
 
         cy.canvas_click(700,600)
 

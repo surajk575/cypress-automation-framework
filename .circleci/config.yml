@@ -5,3 +5,17 @@ workflows:
   build:
     jobs:
       - cypress/run
+      
+
+
+version: 2.1
+orbs: 
+  node: circleci/node@5.0.2
+jobs:
+  build:
+    steps:
+      - checkout
+      - node/install
+      - node/install-packages:
+          include-branch-in-cache-key: false
+      - run ...      

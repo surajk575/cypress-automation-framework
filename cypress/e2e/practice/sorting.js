@@ -1,17 +1,12 @@
 /// <reference types="Cypress" />
 
-describe("Random word", () => {
+describe("Sorting Table", () => {
  
-    it('Create random word', () => {
+    it('sort table', () => {
 
-        cy.visit("https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/")
-        cy.get('.sortable') // table
-        .within(() => {
-          // limit query commands to the found element
-          cy.get("(//tbody)[1]")
-            .should('have.length', 4) // non-header rows
-        })
-
+        cy.visit("https://www.kryogenix.org/code/browser/sorttable/")
+        cy.get("//body[1]/div[1]/table[2]/tbody[1]/tr/td[1]")
+       
     
             
     

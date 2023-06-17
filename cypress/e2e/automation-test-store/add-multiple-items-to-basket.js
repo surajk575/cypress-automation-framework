@@ -1,0 +1,28 @@
+/// <reference types="Cypress" />
+import AutoStore_Homepage_PO from "../../support/pageObjects/automation-test-store/AutoStore_Homepage_PO";
+import AutoStore_HairCare_PO from "../../support/pageObjects/automation-test-store/AutoStore_HairCare_PO";
+//Lecture 183 to 185
+describe("Add multiple items to basket", () =>{
+
+    const autoStore_Homepage_PO = new AutoStore_Homepage_PO();
+    const autoStore_Haircare_PO = new AutoStore_HairCare_PO();
+
+
+    before(function(){
+        cy.fixture("products").then(function(data){
+            globalThis.data=data;
+        })
+    })
+    beforeEach(function(){
+        cy.clearLocalStorage();
+        cy.clearCookies();
+        autoStore_Homepage_PO.accessHomepage();
+        autoStore_Homepage_PO.clickOn_HairCare_Link();
+    })
+    it("Addspecific item to basket", () => { 
+          autoStore_Haircare_PO.addHairCareProductsToBasket();
+    })
+
+    
+
+})   

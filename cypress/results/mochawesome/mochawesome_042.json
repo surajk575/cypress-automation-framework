@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T15:41:46.508Z",
+    "end": "2023-06-17T15:42:33.691Z",
+    "duration": 47183,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "90acf1af-1036-48d4-be14-85a8398e22a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\iterate-over-elements.js",
+      "file": "cypress\\e2e\\automation-test-store\\iterate-over-elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1fa31acf-efe4-4149-b796-27880610239d",
+          "title": "Iterate Over Elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log information for all Hair care products",
+              "fullTitle": "Iterate Over Elements Log information for all Hair care products",
+              "timedOut": null,
+              "duration": 15704,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Lecture 90 and 91 and 92\ncy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n  cy.log(\"Index : \" + index + \" : \" + $el.text());\n});",
+              "err": {},
+              "uuid": "174a896a-23d4-4042-988e-f4b35c80a4c0",
+              "parentUUID": "1fa31acf-efe4-4149-b796-27880610239d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add specific product to basket",
+              "fullTitle": "Iterate Over Elements Add specific product to basket",
+              "timedOut": null,
+              "duration": 7921,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n    if($el.text().includes('Curls to straight Shampoo')){\n        cy.wrap($el).click()\n    }\n  })*/\n// Lecture 177 to 180\ncy.selectProduct('Curls to straight Shampoo');",
+              "err": {},
+              "uuid": "ca11ae6d-c2d9-4d4f-8863-acdc12b27266",
+              "parentUUID": "1fa31acf-efe4-4149-b796-27880610239d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add another specific product to basket",
+              "fullTitle": "Iterate Over Elements Add another specific product to basket",
+              "timedOut": null,
+              "duration": 9460,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct('Seaweed Conditioner');",
+              "err": {},
+              "uuid": "ba18c246-9e21-4874-bcf9-8325fc251521",
+              "parentUUID": "1fa31acf-efe4-4149-b796-27880610239d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add another new specific product to basket",
+              "fullTitle": "Iterate Over Elements Add another new specific product to basket",
+              "timedOut": null,
+              "duration": 9540,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct('Eau Parfumee au The Vert Shampoo');",
+              "err": {},
+              "uuid": "9dbf1b0b-1329-4304-a246-733c2dbc4a7f",
+              "parentUUID": "1fa31acf-efe4-4149-b796-27880610239d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "174a896a-23d4-4042-988e-f4b35c80a4c0",
+            "ca11ae6d-c2d9-4d4f-8863-acdc12b27266",
+            "ba18c246-9e21-4874-bcf9-8325fc251521",
+            "9dbf1b0b-1329-4304-a246-733c2dbc4a7f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

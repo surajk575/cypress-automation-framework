@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T13:59:04.072Z",
+    "end": "2023-06-17T13:59:28.327Z",
+    "duration": 24255,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a2951d4b-57ec-4e20-9fa0-800c4ba99481",
+      "title": "",
+      "fullFile": "cypress\\e2e\\practice\\random-selection-p.js",
+      "file": "cypress\\e2e\\practice\\random-selection-p.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aed9fc05-7515-415e-a94f-c7c22a603972",
+          "title": "Cypress.io tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open cypress.io page",
+              "fullTitle": "Cypress.io tests Open cypress.io page",
+              "timedOut": null,
+              "duration": 18086,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://demo.actitime.com/login.do\");\ncy.get('#username').type(\"admin\");\ncy.get(':nth-child(5) > :nth-child(1) > .textFieldsArea > .textFieldsTable > tbody > :nth-child(2) > td > .textField').type(\"manager\");\ncy.Click_button('#keepLoggedInCheckBox');\ncy.Click_button('#loginButton > div');\ncy.get('#enterTTMainContent').should('be.visible');\ncy.random_select('.userSelectorButton', '.x-combo-list-item');",
+              "err": {},
+              "uuid": "e5a553ce-cfe9-4da8-bd81-ca9b4bf50e1a",
+              "parentUUID": "aed9fc05-7515-415e-a94f-c7c22a603972",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e5a553ce-cfe9-4da8-bd81-ca9b4bf50e1a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18086,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

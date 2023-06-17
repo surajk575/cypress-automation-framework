@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T15:23:32.417Z",
+    "end": "2023-06-17T15:23:52.444Z",
+    "duration": 20027,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9beb8051-2134-4ec3-b018-babb7cb4e262",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\alias-invokes.js",
+      "file": "cypress\\e2e\\automation-test-store\\alias-invokes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee7ec5f3-f237-4edf-8f46-f5af037ae820",
+          "title": "Alias and invikes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Calculate total of nornal and sale products1",
+              "fullTitle": "Alias and invikes Calculate total of nornal and sale products1",
+              "timedOut": null,
+              "duration": 15211,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Lecture 97\ncy.visit(\"https://automationteststore.com/\");\n/*\ncy.get(\".thumbnail\").as('allThumbnail')\ncy.get('@allThumbnail').find('.oneprice').each(($el, index, $list) => {\n    cy.log($el.text())\n    })\n    */\n// Lecture 98 and 99\ncy.get(\".thumbnail\").find('.oneprice').invoke('text').as('itemPrice');\ncy.get(\".thumbnail\").find('.pricenew').invoke('text').as('saleItemPrice');\nvar itemsTotal = 0;\ncy.get('@itemPrice').then($linkText => {\n  var itemPriceTotal = 0;\n  var itemPrice = $linkText.split('$');\n  var i;\n  for (i = 0; i < itemPrice.length; i++) {\n    cy.log(itemPrice[i]);\n    itemPriceTotal += Number(itemPrice[i]);\n  }\n  itemsTotal += itemPriceTotal;\n  cy.log(\"Non sale price item total : \" + itemPriceTotal);\n});\n// Lecture 100\ncy.get('@saleItemPrice').then($linkText => {\n  var saleItemsPrice = 0;\n  var saleItemPrice = $linkText.split('$');\n  var i;\n  for (i = 0; i < saleItemPrice.length; i++) {\n    cy.log(saleItemPrice[i]);\n    saleItemsPrice += Number(saleItemPrice[i]);\n  }\n  itemsTotal += saleItemsPrice;\n  cy.log(\"Sale price item total : \" + saleItemsPrice);\n}).then(() => {\n  cy.log(\"The total price of all products : \" + itemsTotal);\n  expect(itemsTotal).to.equal(656.50);\n});",
+              "err": {},
+              "uuid": "2a1b6b8a-0399-447f-875a-843fd8c439b8",
+              "parentUUID": "ee7ec5f3-f237-4edf-8f46-f5af037ae820",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2a1b6b8a-0399-447f-875a-843fd8c439b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15211,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

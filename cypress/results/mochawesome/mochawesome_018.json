@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-17T13:55:12.073Z",
+    "end": "2023-06-17T13:55:39.905Z",
+    "duration": 27832,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3feebe42-6b63-40e9-92e3-630559efc796",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\iterate-over-elements.js",
+      "file": "cypress\\e2e\\automation-test-store\\iterate-over-elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c1fbe22-a86d-4871-af52-113c2f327ac2",
+          "title": "Iterate Over Elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log information for all Hair care products",
+              "fullTitle": "Iterate Over Elements Log information for all Hair care products",
+              "timedOut": null,
+              "duration": 19396,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Lecture 90 and 91 and 92\ncy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n  cy.log(\"Index : \" + index + \" : \" + $el.text());\n});",
+              "err": {},
+              "uuid": "a0e899c6-96c2-4779-9609-51957fadb9bb",
+              "parentUUID": "1c1fbe22-a86d-4871-af52-113c2f327ac2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add specific product to basket",
+              "fullTitle": "Iterate Over Elements Add specific product to basket",
+              "timedOut": null,
+              "duration": 4176,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "/*cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n    if($el.text().includes('Curls to straight Shampoo')){\n        cy.wrap($el).click()\n    }\n  })*/\n// Lecture 177 to 180\ncy.selectProduct('Curls to straight Shampoo');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > $(...).carouFredSel is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Iterate Over Elements`",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > $(...).carouFredSel is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Iterate Over Elements`\n    at <unknown> (https://automationteststore.com/storefront/view/default/javascript/custom.js:113:23)\n    at dispatch (https://automationteststore.com/storefront/view/default/javascript/jquery-1.12.4.min.js:3:12444)\n    at r.handle (https://automationteststore.com/storefront/view/default/javascript/jquery-1.12.4.min.js:3:9173)",
+                "diff": null
+              },
+              "uuid": "7875334a-7c3e-4a4f-8230-b51bb03e9558",
+              "parentUUID": "1c1fbe22-a86d-4871-af52-113c2f327ac2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add another specific product to basket",
+              "fullTitle": "Iterate Over Elements Add another specific product to basket",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct('Seaweed Conditioner');",
+              "err": {},
+              "uuid": "ed85b004-ca0a-4703-9e8a-b15c4680dc2f",
+              "parentUUID": "1c1fbe22-a86d-4871-af52-113c2f327ac2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Add another new specific product to basket",
+              "fullTitle": "Iterate Over Elements Add another new specific product to basket",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct('Eau Parfumee au The Vert Shampoo');",
+              "err": {},
+              "uuid": "fea528f6-c88a-4414-9182-3aef3228e12f",
+              "parentUUID": "1c1fbe22-a86d-4871-af52-113c2f327ac2",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a0e899c6-96c2-4779-9609-51957fadb9bb"
+          ],
+          "failures": [
+            "7875334a-7c3e-4a4f-8230-b51bb03e9558"
+          ],
+          "pending": [],
+          "skipped": [
+            "ed85b004-ca0a-4703-9e8a-b15c4680dc2f",
+            "fea528f6-c88a-4414-9182-3aef3228e12f"
+          ],
+          "duration": 23572,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-17T13:56:19.560Z",
+    "end": "2023-06-17T13:57:14.770Z",
+    "duration": 55210,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "a7ea70ac-f151-4086-80a2-f091fd62c3ba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\practice\\firelawn-login.js",
+      "file": "cypress\\e2e\\practice\\firelawn-login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68754e62-dc2d-4feb-bf83-54898b01d366",
+          "title": "Firelawn new login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Men button click",
+              "fullTitle": "Firelawn new login Men button click",
+              "timedOut": null,
+              "duration": 10209,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#men', {\n  timeout: 30000\n}).should('be.visible');\ncy.Click_button('#men');",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nNo elements in the current DOM matched your query:\n\n  > cy.get(button[aria-label='Account settings'])\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Firelawn new login`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nNo elements in the current DOM matched your query:\n\n  > cy.get(button[aria-label='Account settings'])\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Firelawn new login`\n    at isElement (https://www.firelawn.com/__cypress/runner/cypress_runner.js:161426:70)\n    at validateType (https://www.firelawn.com/__cypress/runner/cypress_runner.js:161284:14)\n    at Object.isType (https://www.firelawn.com/__cypress/runner/cypress_runner.js:161315:7)\n    at $Cy.pushSubject (https://www.firelawn.com/__cypress/runner/cypress_runner.js:161023:22)\n    at wrapped (https://www.firelawn.com/__cypress/runner/cypress_runner.js:160609:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/support/commands.js:61:21)",
+                "diff": null
+              },
+              "uuid": "a2ea523d-ecd5-4eb8-90e5-cd62f8d8ca47",
+              "parentUUID": "68754e62-dc2d-4feb-bf83-54898b01d366",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Women button click",
+              "fullTitle": "Firelawn new login Women button click",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#women', {\n  timeout: 30000\n}).should('be.visible');\ncy.Click_button('#women');",
+              "err": {},
+              "uuid": "d315fc14-5b6c-4776-89d3-cf90ce475a18",
+              "parentUUID": "68754e62-dc2d-4feb-bf83-54898b01d366",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a2ea523d-ecd5-4eb8-90e5-cd62f8d8ca47"
+          ],
+          "pending": [],
+          "skipped": [
+            "d315fc14-5b6c-4776-89d3-cf90ce475a18"
+          ],
+          "duration": 10209,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

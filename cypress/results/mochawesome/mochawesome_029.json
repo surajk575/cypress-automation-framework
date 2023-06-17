@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T14:00:27.618Z",
+    "end": "2023-06-17T14:00:45.363Z",
+    "duration": 17745,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3d018594-913a-4f19-a4eb-8e75521b4ccc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\practice\\session.js",
+      "file": "cypress\\e2e\\practice\\session.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c31ccc7-b15a-454d-96a8-9b6f8f99de5b",
+          "title": "Actitime",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login1",
+              "fullTitle": "Actitime Login1",
+              "timedOut": null,
+              "duration": 13195,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://demo.actitime.com/user/submit_tt.do\");",
+              "err": {},
+              "uuid": "304c8eea-1852-43a7-a9e9-c4d72baffc05",
+              "parentUUID": "7c31ccc7-b15a-454d-96a8-9b6f8f99de5b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "304c8eea-1852-43a7-a9e9-c4d72baffc05"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13195,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

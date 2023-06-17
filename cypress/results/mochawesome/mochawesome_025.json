@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T13:58:47.572Z",
+    "end": "2023-06-17T13:59:01.674Z",
+    "duration": 14102,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a007b1f0-8eb8-42ee-9d22-db39a1ca141f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\practice\\multi-select.js",
+      "file": "cypress\\e2e\\practice\\multi-select.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f63d528b-d16c-43c5-aafe-a14f87b3cf2c",
+          "title": "Multi select",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should select multiple",
+              "fullTitle": "Multi select should select multiple",
+              "timedOut": null,
+              "duration": 6192,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#multiple-select-input').click({\n  force: true\n});\n//cy.get('#multiple-select')",
+              "err": {},
+              "uuid": "6fefbe6f-5fbd-4577-b0b1-8a4aac8ffb92",
+              "parentUUID": "f63d528b-d16c-43c5-aafe-a14f87b3cf2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6fefbe6f-5fbd-4577-b0b1-8a4aac8ffb92"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T13:52:13.909Z",
+    "end": "2023-06-17T13:52:19.570Z",
+    "duration": 5661,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "542021b2-c85f-4c64-80a0-2577f80e4ff3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\data-tables.js",
+      "file": "cypress\\e2e\\webdriver-uni\\data-tables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3698dc73-d3f0-4c19-b144-1cdb82ec7826",
+          "title": "Handing data via Webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Calculate and assert the total age of all users",
+              "fullTitle": "Handing data via Webdriveruni Calculate and assert the total age of all users",
+              "timedOut": null,
+              "duration": 4993,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var userDetails = [];\nlet numb = 0;\ncy.get('#thumbnail-1 td').each(($el, index, $list) => {\n  userDetails[index] = $el.text();\n}).then(() => {\n  var i;\n  for (let i = 0; i < userDetails.length; i++) {\n    //cy.log(userDetails[i])\n    if (Number(userDetails[i])) {\n      numb += Number(userDetails[i]);\n    }\n  }\n  cy.log(\"Found total age: \" + numb);\n  expect(numb).to.eq(322);\n});",
+              "err": {},
+              "uuid": "3db38b9a-9bd4-4a5e-b1c5-8a7dd4e9dcb8",
+              "parentUUID": "3698dc73-d3f0-4c19-b144-1cdb82ec7826",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Calculate and assert the age of given user based on last name",
+              "fullTitle": "Handing data via Webdriveruni Calculate and assert the age of given user based on last name",
+              "timedOut": null,
+              "duration": 628,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#thumbnail-1 tr td:nth-child(2)\").each(($el, index, $list) => {\n  const text = $el.text();\n  if (text.includes(\"Woods\")) {\n    cy.get(\"#thumbnail-1 tr td:nth-child(2)\").eq(index).next().then(function (age) {\n      const userAge = age.text();\n      expect(userAge).to.equal('80');\n    });\n  }\n});",
+              "err": {},
+              "uuid": "3db0b62f-4401-4365-bba4-32bce755c444",
+              "parentUUID": "3698dc73-d3f0-4c19-b144-1cdb82ec7826",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3db38b9a-9bd4-4a5e-b1c5-8a7dd4e9dcb8",
+            "3db0b62f-4401-4365-bba4-32bce755c444"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5621,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": "true",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

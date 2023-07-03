@@ -11,4 +11,18 @@ describe('Cypress.io tests', function() {
 
       cy.random_select('.userSelectorButton','.x-combo-list-item')
     })
+
+    it.skip('Random selection from dropdown', function() {
+     
+      cy.get('#control-nationality').click()  // open the dropdown
+
+    cy.get('id^="option-nationality-"]')    // all elements with id starting "option-nationality"
+     .then($options => {
+    const count = $options.length
+    const randomIndex = Math.floor(Math.random() * count)
+    const randomOption = $options.eq(randomIndex) 
+    cy.wrap(randomOption).click()
+  })
+
+     })
 }) 

@@ -11,7 +11,7 @@ pipeline {
                         label "remote_node1"
                     }
                     steps {
-                        git url: 'https://github.com/qauni/cypress-automation-framework.git'
+                        git url: 'https://github.com/surajk575/cypress-automation-framework.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerAllTests-autostore-dashboard'
